@@ -1,0 +1,2 @@
+COPY test_helloworld.txt E:\Devops\Docker
+COPY test_helloworld.txt E:\Devops\

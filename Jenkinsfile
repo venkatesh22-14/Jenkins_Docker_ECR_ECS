@@ -11,7 +11,7 @@ pipeline{
 		stage('checkout') {
 		   
 			steps {
-			    git branch: 'master', url: 'https://github.com/venkatesh22-14/Jenkins_Docker_ECR.git'
+			    git branch: 'main', url: 'https://github.com/venkatesh22-14/Jenkins_Docker_ECR_ECS.git'
 			
 			}
 		}

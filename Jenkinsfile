@@ -19,8 +19,8 @@ pipeline{
 		stage('Docker Build and Tag') {
 
 			steps {
-				sh 'docker build -t latest .'
-                sh 'docker tag yogast 221488/yogastwebsite:latest'
+				sh 'docker build -t hexashop .'
+                sh 'docker tag hexashop 221488/hexashopwebsite:latest'
 			}
 		}
 
@@ -28,14 +28,14 @@ pipeline{
 
 			steps {
 				withDockerRegistry([ credentialsId: "docker-cred", url: "" ]) {
-                sh  'docker push 221488/yogastwebsite:latest'}
+                sh  'docker push 221488/hexashopwebsite:latest'}
 		   }
 	   }
 
 	 stage('Run Docker container on Jenkins Agent') {
 
             steps{
-                sh "docker run -d -p 8003:8080 221488/yogastwebsite"
+                sh "docker run -d -p 8003:8080 221488/hexashopwebsite"
             }
         }
     }

@@ -35,7 +35,7 @@ pipeline{
 	 stage('Run Docker container on Jenkins Agent') {
 
             steps{
-                sh "docker run -d -p 8003:8000 221488/hexashopwebsite"
+                sh "docker run -d -p 80:80 221488/hexashopwebsite"
             }
         }
     }
